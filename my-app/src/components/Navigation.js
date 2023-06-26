@@ -1,45 +1,57 @@
 import React from 'react';
+import '../styles/NavigationStyle.css'
 
-export default function Navigation({currentPage, handlePageChange}) {
-  const linkStyle = { border: '1px black', padding: '5px' };
 
+
+function Navigation({currentPage, handlePageChange}) {
+  const linkStyle = { 
+    border: '1px black', 
+    padding: '10px',   
+  };
+// main-header-menu
   return (
-    <nav className="main-header-menu">
-      <section
+    <nav className="navSection">
+      <section className='headerName'><h1>Tolefree</h1></section>
+      <section className=''
         style={{
           display: 'flex',
           fontFamily: 'helvetica',
           flexDirection: 'row',
-          alignItems: 'flex-start',
-          justifyContent: 'flex-start',
+          alignItems: 'center',
+          justifyContent: 'flex-end',
+          
         }}
       >
-        <h1>Tolefree</h1>
-        <div style={linkStyle}>
+        {/* <h1>Tolefree</h1> */}
+      <section className='header'>
+        <div>
           <a href="#about"
           onClick={() => handlePageChange('About')}
           
           >About me</a>
         </div>
 
-        <div style={linkStyle}>
+        <div>
           <a href="#portfolio"
           onClick={() => handlePageChange('Portfolio')}
           >Portfolio</a>
         </div>
 
-        <div style={linkStyle}>
+        <div>
           <a href="#contact"
           onClick={() => handlePageChange('Contact')}
           >Contact</a>
         </div>
 
-        <div style={linkStyle}>
+        <div>
           <a href="#resume"
           onClick={() => handlePageChange('Resume')}
           >Resume</a>
         </div>
       </section>
+      </section>
     </nav>
   );
 }
+
+export default Navigation;

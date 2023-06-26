@@ -1,5 +1,5 @@
 // import logo from './logo.svg';
-// import './App.css';
+import './App.css';
 // import Navigation from './components/Navigation'
 import PortfolioContainer from './components/PortfolioContainer';
 
@@ -10,9 +10,10 @@ import PortfolioContainer from './components/PortfolioContainer';
 // Pass users array to the List component as a prop
 export default function App() {
   return (
-    <div>
+    <div className="">
+      <header className="">
       <PortfolioContainer />
-      {/* <List users={users} /> */}
+      </header>
     </div>
   );
 }
